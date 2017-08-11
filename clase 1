@@ -1,0 +1,122 @@
+// DFD.cpp : main project file.
+#include "stdafx.h"
+#include <iostream>
+using namespace System;
+using namespace std;
+int main()
+{ 
+	int i,n,j,k,contador = 0;
+	cout << "el valor de n" <<endl;              
+	contador++;
+	i = 0;
+	contador ++;
+	cin >> n;	//1
+	contador++;
+	while (contador=contador+1 , i<n)
+	{
+		j= 0;
+		contador ++;
+		while (contador=contador+1 , j<n)
+		{
+			k = 0;
+			contador ++;
+			while (contador=contador+1 , k<n)
+				{
+					k++;
+					contador ++;
+				}
+			j++;
+			contador ++;
+		}
+		i++;
+		contador ++;
+	}
+	cout << "valor del contador " << contador <<endl;
+	getchar();
+	getchar();
+	return 0;
+
+}
+
+
+//2do ejemplo
+/*
+#include "stdafx.h"
+#include <iostream>
+using namespace System;
+using namespace std;
+
+int main(array<System::String ^> ^args)
+{
+	int i, contador, n,j;
+	contador = 0;
+	cout << "el valor de n" <<endl;	//1
+	contador++;
+	cin >> n;	//1
+	contador++;
+	i=0;	//1
+	contador++; 
+	while (contador =  contador+1 , i<n)		//n+1
+	{
+		j = 0;	//n
+		contador++;
+			while (contador =  contador+1 , j<n) //n^2+n
+			{
+				j++;		//n^2
+				contador++;
+			}
+		i++;		//n
+		contador++;
+	}
+cout << "valor del contador " << contador <<endl;
+	getchar();
+	getchar();
+	return 0;
+}
+
+	//t(n) = C*F(x)
+	//t(n) = 4+4n+2n^2 si n = 5, =74
+	*/
+
+
+
+
+
+
+
+
+
+
+
+
+//Primer ejemplo
+
+/*
+#include "stdafx.h"
+#include <iostream>
+using namespace System;
+using namespace std;
+
+int main(array<System::String ^> ^args)
+{
+	int i, contador, n;
+	contador = 0;
+	cout << "el valor de n" <<endl;	//1
+	contador++;
+	cin >> n;	//1
+	contador++;
+	i=0;	//1
+	contador++; 
+	while (contador =  contador+1 , i<n)		//n+1
+	{
+		i++;			//n
+		contador++;
+	}
+cout << "valor del contador" << contador <<endl;
+	getchar();
+	getchar();
+}
+	//t(n) = C*F(x)
+	//t(n) = 4+2n;
+	//f(x) = n
+	*/
