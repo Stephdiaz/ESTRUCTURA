@@ -1,0 +1,44 @@
+	// asasas.cpp : Defines the entry point for the console application.
+	//
+
+	#include "stdafx.h"
+	#include <iostream>
+	#include "conio.h"
+
+	using namespace std;
+
+	int main()
+	{
+		int i, k, j, n, contador;
+		contador = 0;
+		i = 0;								//1
+		contador++;
+		cout << "introducir n" <<endl;		//1
+		contador++;
+		cin >> n;							//1
+		contador++;
+		while (contador++, i < n)			//n+1
+		{	
+			j = i;							//n
+			contador++;
+			while (contador++, j < n)		//	(n(n+1))/2 + n
+				{
+					k = j;					//n(n+1)/2
+					contador++;
+					while (contador++, k < n)	// n*(n+1)*(n+2)/6 + (n(n+1)) /2
+					{
+						k++;					// n((n+1)/6)*(n+2)
+						contador++;			
+					}
+					j++;					//n(n+1)/2
+					contador++;
+				}
+			i++;
+			contador++;
+		}
+
+	cout << "mostrando contador " << contador;
+	getch();
+		return 0;
+	}
+
