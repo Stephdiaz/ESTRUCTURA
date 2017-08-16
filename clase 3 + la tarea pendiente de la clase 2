@@ -1,0 +1,96 @@
+// TAREA.cpp : Defines the entry point for the console application.
+//
+	
+	#include "stdafx.h"
+	#include <iostream>
+	#include "conio.h"
+
+	using namespace std;
+
+	int main()
+	{
+		int i,j,n,c, contador;
+		contador = 0;
+		cout <<"de el valor de n" << endl;		//1
+		contador++;
+		cin >> n;								//1
+		contador++;
+		cout << "de el valor de c" << endl;		//1
+		contador++;
+		cin >> c;								//1
+		contador++;
+		i = 1;									//1
+		contador++;
+		while (i<=n)							// LOGc X + 2
+		{
+			i=i*c;		//c > 1					LOGc X + 1
+			contador++;
+	
+		}
+		cout <<" el contador es igual a  "<< contador;
+		getch();
+		return 0;
+
+	}
+	//f(x) = LOG c X+1
+
+	//t(n)= 8 +2 (LOGc X)
+
+
+
+
+/*
+
+TAREA TERMINAR
+	#include "stdafx.h"
+	#include <iostream>
+	#include "conio.h"
+
+	using namespace std;
+
+	int main()
+	{
+		int i, k, j,l, n, contador;
+		contador = 0;
+		i = 0;								//1
+		contador++;
+		cout << "introducir n" <<endl;		//1
+		contador++;
+		cin >> n;							//1
+		contador++;
+		while (contador++, i < n)			//n+1
+		{	
+			j = i;							//n
+			contador++;
+			while (contador++, j < n)		//	(n(n+1))/2 + n
+				{
+					k = j;					//n(n+1)/2
+					contador++;
+					while (contador++, k < n)	// n*(n+1)*(n+2)/6 + (n(n+1)) /2
+					{
+						l = k;					// n((n+1)/6)*(n+2)
+						contador++;	
+						while (contador++, l < n)	// n*(n+1)*(n+2)/6 + (n(n+1)) /2
+						{
+							l++;
+							contador++;	
+						}
+						k++;					// n((n+1)/6)*(n+2)
+						contador++;	
+					}
+					j++;					//n(n+1)/2
+					contador++;
+				}
+			i++;
+			contador++;
+		}
+
+	cout << "mostrando contador " << contador;
+	getch();
+		return 0;
+	}
+
+	//	f(x) = (n(n+1)(n+2)(n+3))/24
+
+
+	*/
