@@ -1,0 +1,22 @@
+#pragma once
+#include <iostream>
+#include <string>
+
+using namespace std;
+template <class tipo>
+class POLINOMIO
+{
+NODO<tipo> poli[N];
+public:
+	POLINOMIO(void);
+	POLINOMIO<tipo> operator +(POLINOMIO<tipo> P, POLINOMIO<tipo> Q);
+	POLINOMIO<tipo> operator -(POLINOMIO<tipo> P, POLINOMIO<tipo> Q);
+	POLINOMIO<tipo> operator *(POLINOMIO<tipo> P, POLINOMIO<tipo> Q);
+	POLINOMIO<tipo> operator /(POLINOMIO<tipo> P, POLINOMIO<tipo> Q);
+	POLINOMIO<tipo> Derivar(POLINOMIO<tipo> P);
+	POLINOMIO<tipo> Integrar(POLINOMIO<tipo> P);
+	POLINOMIO<tipo> Ordenar(POLINOMIO<tipo> P);
+	POLINOMIO<tipo> This();
+	void This(POLINOMIO<tipo> P);
+};
+
