@@ -1,0 +1,124 @@
+
+package PilaCola;
+
+import javax.swing.JOptionPane;
+
+public class Pila{
+    int[] v= new int[100];
+    int n;
+        
+    public Pila() {
+        n = -1;
+    }
+    public boolean vacia() {
+        return n == -1;
+    }
+
+    public boolean llena(){
+        return n == 100;
+    }
+
+    public int cant() {
+        return n + 1;
+    }
+        
+    public void meter(int x) {
+        if (llena())
+            JOptionPane.showMessageDialog(null,"Pila:Llena, No se puede meter..!!!");
+        else
+        {
+            n++;
+            v[n] = x;
+        }                        
+    }
+    
+    public int sacar()
+    {
+        if (!vacia())            
+        {
+            int x = v[n];
+            n--;
+            return x;                      
+        }
+        else
+            return -1;
+    }    
+        
+  public  void EliminarDuplicados()
+	{
+	Pila aux,aux2;
+	Nodo uno, dos,tres;
+	while (!_pile.PilaVacia())
+	{
+		_pile.Eliminar(uno);
+		while (!_pile.PilaVacia())
+		{
+			_pile.Eliminar(dos);
+			if (dos.Elemento() != uno.Elemento())
+			{
+				aux.Insertar(dos);
+			}
+		}
+		while (!aux.PilaVacia())
+		{
+			aux.Eliminar(tres);
+			_pile.Insertar(tres);
+		}
+		aux2.Insertar(uno);
+
+		
+	}
+	_pile = aux2;
+	}
+	void Pila_Ordenar()
+	{
+	NODO<int> uno, dos, tres;
+	Pila<int> aux,aux2;
+	while (!_pile.PilaVacia())
+	{
+		_pile.Eliminar(uno);
+		if(aux.PilaVacia())
+		{
+			aux.Insertar(uno);
+		}
+		else
+		{
+			aux.Tope(dos);
+			if (dos.Elemento() < uno.Elemento())
+			{
+				while (!aux.PilaVacia() && dos.Elemento() > uno.Elemento())
+				{
+					aux.Eliminar(dos);
+					aux2.Insertar(dos);
+					aux.Tope(dos);
+				}
+				aux.Insertar(uno);
+				while (!aux2.PilaVacia())
+				{
+					aux2.Eliminar(dos);
+					aux.Insertar(dos);
+				}
+			}
+			else
+			{
+				aux.Insertar(uno);
+			}
+		}
+	}
+	_pile = aux;
+	}
+	void InvertirPila()
+	{
+		Pila<int> sub;
+		NODO<int> i;
+		while (!_pile.PilaVacia())
+		{
+			_pile.Eliminar(i);
+			sub.Insertar(i);
+		}
+		_pile = sub;
+	}
+    
+    
+    
+}//end class
